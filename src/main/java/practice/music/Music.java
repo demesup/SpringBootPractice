@@ -1,4 +1,4 @@
-package music;
+package practice.music;
 
 public interface Music {
     String getSong();
