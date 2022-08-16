@@ -1,9 +1,12 @@
 package practice;
 
 import practice.music.ClassicalMusic;
+import practice.music.Computer;
 import practice.music.Music;
 import practice.music.MusicPlayer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Collection;
 
 public class Test {
     public static void main(String[] args) {
@@ -11,29 +14,34 @@ public class Test {
                 "applicationContext.xml"
         );
 //        testInitDestroy(context);
-        //testPlayer(context);
+//        testPlayer(context);
 //        testComponent(context);
-        autowired(context);
-
-
+//        autowired(context);
+        testComputer(context);
 
 
         context.close();
     }
 
-    private static void autowired(ClassPathXmlApplicationContext context) {
+    private static void testComputer(ClassPathXmlApplicationContext context) {
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
+    }
 
+    private static void autowired(ClassPathXmlApplicationContext context) {
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        musicPlayer.playMusic();
     }
 
     private static void testComponent(ClassPathXmlApplicationContext context) {
         Music music = context.getBean("musicBean", Music.class);
         Music music1 = context.getBean("classicalMusic", Music.class);
 
-        MusicPlayer player = new MusicPlayer(music);
-        MusicPlayer player1 = new MusicPlayer(music1);
-
-        player.playMusic();
-        player1.playMusic();
+//        MusicPlayer player = new MusicPlayer(music);
+//        MusicPlayer player1 = new MusicPlayer(music1);
+//
+//        player.playMusic();
+//        player1.playMusic();
     }
 
     private static void testInitDestroy(ClassPathXmlApplicationContext context) {

@@ -3,7 +3,7 @@ package practice.music;
 import lombok.ToString;
 import org.springframework.stereotype.Component;
 
-@Component("musicBean")
+@Component
 @ToString
 public class EdgyMusic implements Music {
 
