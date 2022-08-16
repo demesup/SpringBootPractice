@@ -1,4 +1,4 @@
-package practice.music;
+package practice.dependencyinjection.music;
 
 import lombok.ToString;
 import org.springframework.stereotype.Component;

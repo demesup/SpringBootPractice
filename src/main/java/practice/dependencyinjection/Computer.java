@@ -1,13 +1,11 @@
-package practice.music;
+package practice.dependencyinjection;
 
-import lombok.Data;
-import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Computer {
-    private int id;
-    private MusicPlayer player;
+    private final int id;
+    private final MusicPlayer player;
 
     public Computer(MusicPlayer player) {
         this.id = 1;

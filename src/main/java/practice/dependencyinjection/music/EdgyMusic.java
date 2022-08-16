@@ -1,14 +1,14 @@
-package practice.music;
+package practice.dependencyinjection.music;
 
 import lombok.ToString;
 import org.springframework.stereotype.Component;
 
-@ToString
-
 @Component
-public class RockMusic implements Music{
+@ToString
+public class EdgyMusic implements Music {
+
     @Override
     public String getSong() {
-        return "Wind cries Mary";
+        return "Good boy gone bad";
     }
 }

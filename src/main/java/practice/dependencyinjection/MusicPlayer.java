@@ -1,9 +1,10 @@
-package practice.music;
+package practice.dependencyinjection;
 
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import practice.dependencyinjection.music.Music;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +72,7 @@ public class MusicPlayer {
 
     public String playMusicList() {
         StringBuilder builder = new StringBuilder();
-        musicList.forEach(music -> builder.append("Playing " + music.getSong()));
+        musicList.forEach(music -> builder.append("Playing ").append(music.getSong()));
 
         return String.valueOf(builder);
     }

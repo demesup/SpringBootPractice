@@ -1,12 +1,8 @@
-package practice;
+package practice.dependencyinjection;
 
-import practice.music.ClassicalMusic;
-import practice.music.Computer;
-import practice.music.Music;
-import practice.music.MusicPlayer;
+import practice.dependencyinjection.music.ClassicalMusic;
+import practice.dependencyinjection.music.Music;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.Collection;
 
 public class Test {
     public static void main(String[] args) {
