@@ -1,8 +1,9 @@
 package iocanddi.utils.music;
 
-public class ClassicalMusic implements Music{
+public class RockMusicIOC implements MusicIOC{
+
     @Override
     public String getSong() {
-        return "Hungarian Rapsody";
+        return "Eye of the tiger";
     }
 }

@@ -1,11 +1,11 @@
 package iocanddi.utils;
 
-import iocanddi.utils.music.Music;
+import iocanddi.utils.music.MusicIOC;
 
-public class MusicPlayer {
-    private final Music music;
+public class MusicPlayerIOC {
+    private MusicIOC music;
 
-    public MusicPlayer(Music music) {
+    public MusicPlayerIOC(MusicIOC music) {
         this.music = music;
     }
 

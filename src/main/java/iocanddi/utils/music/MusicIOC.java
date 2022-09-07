@@ -1,5 +1,5 @@
 package iocanddi.utils.music;
 
-public interface Music {
+public interface MusicIOC {
     String getSong();
 }

@@ -1,7 +1,7 @@
 package iocanddi;
 
-import iocanddi.utils.MusicPlayer;
-import iocanddi.utils.music.Music;
+import iocanddi.utils.MusicPlayerIOC;
+import iocanddi.utils.music.MusicIOC;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
@@ -16,14 +16,14 @@ public class Test {
     }
 
     private static void dependencyInjection(ClassPathXmlApplicationContext context) {
-        MusicPlayer player = context.getBean("musicPlayer", MusicPlayer.class);
-//
+        MusicPlayerIOC player = context.getBean("musicPlayer", MusicPlayerIOC.class);
+
         player.playMusic();
     }
 
     private static void inversionOfControl(ClassPathXmlApplicationContext context) {
-        Music music = context.getBean("musicBean", Music.class);
-        MusicPlayer player =new MusicPlayer(music);
+        MusicIOC music = context.getBean("musicBean", MusicIOC.class);
+        MusicPlayerIOC player =new MusicPlayerIOC(music);
         player.playMusic();
 
         context.close();

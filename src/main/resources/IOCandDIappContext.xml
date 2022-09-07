@@ -5,11 +5,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="musicBean"
-          class="iocanddi.utils.music.ClassicalMusic">
+          class="iocanddi.utils.music.ClassicalMusicIOC">
     </bean>
 
     <bean id="musicPlayer"
-          class="iocanddi.utils.MusicPlayer">
+          class="iocanddi.utils.MusicPlayerIOC">
         <constructor-arg ref="musicBean"/>
     </bean>
 </beans>
