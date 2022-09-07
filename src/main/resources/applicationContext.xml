@@ -7,34 +7,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="practice.dependencyinjection"/>
-    
-    <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
-    <!--    <bean id="classicalMusic"-->
-    <!--          class="practice.music.ClassicalMusic"-->
-    <!--          init-method="init"-->
-    <!--          destroy-method="destroy"-->
-    <!--          factory-method="factoryMethod">-->
-    <!--    </bean>-->
-    <!--    <bean id="rockMusic"-->
-    <!--          class="practice.music.RockMusic">-->
-    <!--    </bean>-->
-    <!--    <bean id="edgyMusic"-->
-    <!--          class="practice.music.EdgyMusic">-->
-    <!--    </bean>-->
 
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="practice.dependencyinjection.MusicPlayer"-->
-    <!--          scope="prototype">-->
-    <!--        <property name="musicList">-->
-    <!--            <list>-->
-    <!--                <ref bean="rockMusic"/>-->
-    <!--                <ref bean="edgyMusic"/>-->
-    <!--                <ref bean="classicalMusic"/>-->
-    <!--            </list>-->
-    <!--        </property>-->
-
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
-    <!--    </bean>-->
 </beans>
