@@ -10,23 +10,23 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="disetter.utils.music.ClassicalMusicDI">
+          class="configuration.disetter.utils.music.ClassicalMusicDI">
     </bean>
 
     <bean id="musicPlayer"
-          class="disetter.utils.MusicPlayerDI">
+          class="configuration.disetter.utils.MusicPlayerDI">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
     <bean id="musicListPlayer"
-          class="disetter.utils.MusicListPlayer">
+          class="configuration.disetter.utils.MusicListPlayer">
         <property name="musicDIList">
             <list>
-                <bean id="classical" class="disetter.utils.music.ClassicalMusicDI"/>
-                <bean id="rock" class="disetter.utils.music.RockMusicDI"/>
-                <bean id="kpop" class="disetter.utils.music.KPOPMusicDI"/>
+                <bean id="classical" class="configuration.disetter.utils.music.ClassicalMusicDI"/>
+                <bean id="rock" class="configuration.disetter.utils.music.RockMusicDI"/>
+                <bean id="kpop" class="configuration.disetter.utils.music.KPOPMusicDI"/>
             </list>
         </property>
         <property name="name" value="${musicPlayer.name}"/>
